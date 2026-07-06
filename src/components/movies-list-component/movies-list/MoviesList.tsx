@@ -1,5 +1,6 @@
 import {IResult} from "@/src/models/movie/IResult";
-import Image from "next/image";
+import Link from "next/link";
+
 
 interface IMoviesList {
     item:IResult
@@ -7,9 +8,9 @@ interface IMoviesList {
 
 export const MoviesList = ({item}:IMoviesList) => {
     return (
-        <div>
+        <div><Link href={'/'+item.id.toString()}>
             <img src={`https://image.tmdb.org/t/p/w500${item.backdrop_path}`}  alt={item.title}/>
             <h3>{item.title}</h3>
-        </div>
+        </Link></div>
     );
 };
