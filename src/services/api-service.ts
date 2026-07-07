@@ -21,3 +21,12 @@ export const getMovies = async(): Promise<IResult[]> =>{
     }
 
 }
+export const getMovie = async(id:string): Promise<IResult> =>{
+    const response =  await fetch(`${baseUrl}/movie/${id}`, {
+            headers: {
+                'Authorization': `Bearer ${apiKey}`,
+                'Content-Type': 'application/json'
+                 },
+            })
+          return response.json()
+        }

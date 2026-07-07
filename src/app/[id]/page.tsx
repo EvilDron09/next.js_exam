@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import {FC} from "react";
+import {MovieInfo} from "@/src/components/movie-info-component/movie-info/MovieInfo";
+import {getMovie} from "@/src/services/api-service";
 
 
 type Props = {
@@ -13,12 +15,17 @@ export const generateMetadata = async ({params}:Props):Promise<Metadata> =>{
     }
 }
 
+
 const MoviePage :FC<Props> = async ({params}) =>{
 
-    const {id} = await params
+    const {id} = await params;
+    const movie = await getMovie(id);
+
+
     return(
         <>
-        <p>{params.id}</p>
+            <MovieInfo item={movie}/>
+            <button>Full information</button>
         </>
     )
 }
