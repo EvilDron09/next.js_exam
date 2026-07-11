@@ -2,7 +2,6 @@
 import {FC} from "react";
 import {MovieInfo} from "@/src/components/movie-info-component/movie-info/MovieInfo";
 import {getMovie} from "@/src/services/api-service";
-import Link from "next/link";
 
 
 type Props = {
@@ -10,7 +9,7 @@ type Props = {
 }
 
 
-const MoviePage :FC<Props> = async ({params}) =>{
+const moviePage :FC<Props> = async ({params}) =>{
 
     const {id} = await params;
     const movie = await getMovie(id);
@@ -21,4 +20,4 @@ const MoviePage :FC<Props> = async ({params}) =>{
         </>
     )
 }
-export default MoviePage
+export default moviePage
