@@ -1,0 +1,16 @@
+.genreCheckbox{
+    display: none;
+}
+
+.genreButton{
+    cursor: pointer;
+    background: silver;
+}
+
+.genreMenu{
+    display: none;
+}
+
+.genreCheckbox:checked ~ .genreMenu{
+    display: block;
+}

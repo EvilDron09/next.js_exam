@@ -1,5 +1,5 @@
 import {IResult} from "@/src/models/movie/IResult";
-import {IGenre} from "@/src/models/gener/IGener";
+import {IGenre} from "@/src/models/gener/IGenre";
 
 const apiKey = process.env.TMDB_API_TOKEN
 const baseUrl = 'https://api.themoviedb.org/3'
@@ -34,14 +34,14 @@ export const getMovie = async(id:string): Promise<IResult> =>{
 
 export const getGenres = async(): Promise<IGenre[]> =>{
     try {
-        const response = await fetch(`${baseUrl}/movie/list`,{
+        const response = await fetch(`${baseUrl}/genre/movie/list`,{
             headers:{
                 'Authorization': `Bearer ${apiKey}`,
                 'Content-Type': 'application/json'
             }
         })
         const data = await response.json()
-        return data.results || []
+        return data.genres || []
     }catch (error) {
         console.log('error')
         return []

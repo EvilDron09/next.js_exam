@@ -1,4 +1,4 @@
-import {IGenre} from "@/src/models/gener/IGener";
+import {IGenre} from "@/src/models/gener/IGenre";
 
 export interface IResult {
     adult: boolean,

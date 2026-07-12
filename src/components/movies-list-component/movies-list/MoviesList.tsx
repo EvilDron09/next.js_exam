@@ -8,7 +8,7 @@ interface IMoviesList {
 
 export const MoviesList = ({item}:IMoviesList) => {
     return (
-        <div className={'moviesList'}><Link href={'/id/'+item.id.toString()}>
+        <div className={'moviesList'}><Link href={'/movie/'+item.id.toString()}>
             <img src={`https://image.tmdb.org/t/p/w500${item.backdrop_path}`}  alt={item.title}/>
             <div>
                 <h3>{item.title} </h3>

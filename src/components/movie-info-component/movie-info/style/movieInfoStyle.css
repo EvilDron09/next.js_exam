@@ -1,0 +1,12 @@
+section>input{
+    display: none;
+}
+section>label{
+    cursor: pointer;
+}
+section>div{
+    display: none;
+}
+section>input:checked ~ section>div{
+    display: block;
+}
