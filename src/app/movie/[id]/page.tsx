@@ -4,8 +4,9 @@ import {MovieInfo} from "@/src/components/movie-info-component/movie-info/MovieI
 import {getMovie} from "@/src/services/api-service";
 
 
+
 type Props = {
-    params:{id:string}
+    params:{id:string};
 }
 
 
