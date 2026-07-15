@@ -1,0 +1,26 @@
+.popularMovies{
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    padding: 20px 0;
+}
+.popularMovies>div{
+    display: flex;
+    width: max-content;
+    animation: scrollLine 50s linear infinite  ;
+}
+
+.popularMovies>div>div img{
+    height: 200px;
+    width: auto;
+    object-fit: cover;
+}
+
+@keyframes  scrollLine {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-50%);
+    }
+}

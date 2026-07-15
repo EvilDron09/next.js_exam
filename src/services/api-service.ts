@@ -63,3 +63,19 @@ export const getMoviesGenre = async(id:string): Promise<IResult[]> => {
         return []
     }
 }
+
+export const getPopularMovies = async(): Promise<IResult[]> => {
+    try {
+        const response = await fetch(`${baseUrl}/discover/movie?sort_by=popularity.desc`, {
+            headers: {
+                'Authorization': `Bearer ${apiKey}`,
+                'Content-Type': 'application/json'
+            }
+        })
+        const data = await response.json()
+        return data.results || []
+    } catch (error) {
+        console.log('error')
+        return []
+    }
+}
