@@ -79,3 +79,19 @@ export const getPopularMovies = async(): Promise<IResult[]> => {
         return []
     }
 }
+
+export const getMoviePages = async(page:number): Promise<IResult[]> => {
+    try {
+        const response = await fetch(`${baseUrl}/discover/movie?page=${page}`, {
+            headers: {
+                'Authorization': `Bearer ${apiKey}`,
+                'Content-Type': 'application/json'
+            }
+        })
+        const data = await response.json()
+        return data.results || []
+    } catch (error) {
+        console.log('error')
+        return []
+    }
+}
