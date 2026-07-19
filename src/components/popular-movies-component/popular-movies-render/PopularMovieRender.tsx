@@ -1,6 +1,7 @@
 import {getPopularMovies} from "@/src/services/api-service";
 import {PopularMovies} from "@/src/components/popular-movies-component/popular-movies/PopularMovies";
 import './style/popularMovieRenderStyle.css'
+import Link from "next/link";
 
 export const PopularMovieRender = async () => {
 
@@ -10,7 +11,7 @@ export const PopularMovieRender = async () => {
         <div className={'popularMovies'}>
             <div>
                 {
-                    movies.map((movie, index) => <div  key={`${movie.id}-${index}`}>
+                    movies.map((movie, index) => <div key={`${movie.id}-${index}`}>
                     <PopularMovies key={movie.id} item={movie}/>
                     </div>)
                 }

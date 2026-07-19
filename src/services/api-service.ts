@@ -48,9 +48,9 @@ export const getGenres = async(): Promise<IGenre[]> =>{
     }
 }
 
-export const getMoviesGenre = async(id:string): Promise<IResult[]> => {
+export const getMoviesGenre = async(id:string, page:number): Promise<IResult[]> => {
     try {
-        const response = await fetch(`${baseUrl}/discover/movie?with_genres=${id}`, {
+        const response = await fetch(`${baseUrl}/discover/movie?with_genres=${id}&page=${page}`, {
             headers: {
                 'Authorization': `Bearer ${apiKey}`,
                 'Content-Type': 'application/json'
