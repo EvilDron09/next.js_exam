@@ -2,16 +2,8 @@
     display: flex;
     justify-content: center;
     margin-bottom: 100px;
-    animation: scroll 1s ease-in-out;
     height: 700px;
+    gap: 20px;
+
 }
 
-@keyframes scroll {
-    from{
-        opacity: 0;
-    }
-
-    to{
-        opacity: 1;
-    }
-}

@@ -1,7 +1,6 @@
 import {getPopularMovies} from "@/src/services/api-service";
 import {PopularMovies} from "@/src/components/popular-movies-component/popular-movies/PopularMovies";
 import './style/popularMovieRenderStyle.css'
-import Link from "next/link";
 
 export const PopularMovieRender = async () => {
 
