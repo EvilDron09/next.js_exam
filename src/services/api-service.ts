@@ -95,3 +95,19 @@ export const getMoviePages = async(page:number): Promise<IResult[]> => {
         return []
     }
 }
+
+export const getMovieSearch = async(query:string, page:number): Promise<IResult[]> => {
+    try {
+        const response = await fetch(`${baseUrl}/search/movie?query=${encodeURIComponent(query)}&page=${page}`, {
+            headers: {
+                'Authorization': `Bearer ${apiKey}`,
+                'Content-Type': 'application/json'
+            }
+        })
+        const data = await response.json()
+        return data.results || []
+    } catch (error) {
+        console.log('error')
+        return []
+    }
+}
