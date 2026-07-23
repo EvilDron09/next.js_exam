@@ -1,15 +1,15 @@
 import {SearchMovies} from "@/src/components/search-component/SearchMovies";
 
 interface Props {
-    params:{query:string, page:number}
+    searchParams:{query:string, page:number}
 }
-const search= ({params}:Props) =>{
+const search= async ({searchParams}:Props) =>{
 
-
+    const resolvedSearchParams = await searchParams;
 
     return(
         <>
-          <SearchMovies params={params}/>
+          <SearchMovies searchParams={resolvedSearchParams}/>
         </>
     )
 }

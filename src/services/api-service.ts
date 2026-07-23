@@ -98,7 +98,7 @@ export const getMoviePages = async(page:number): Promise<IResult[]> => {
 
 export const getMovieSearch = async(query:string, page:number): Promise<IResult[]> => {
     try {
-        const response = await fetch(`${baseUrl}/search/movie?query=${encodeURIComponent(query)}&page=${page}`, {
+        const response = await fetch(`${baseUrl}/search/movie?query=${query}&page=${page}`, {
             headers: {
                 'Authorization': `Bearer ${apiKey}`,
                 'Content-Type': 'application/json'
