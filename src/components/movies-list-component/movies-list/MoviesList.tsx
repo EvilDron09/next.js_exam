@@ -1,6 +1,6 @@
 import {IResult} from "@/src/models/movie/IResult";
 import Link from "next/link";
-
+import './style/movieListStyle.css'
 
 interface IMoviesList {
     item:IResult

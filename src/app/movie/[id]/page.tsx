@@ -22,7 +22,7 @@ const moviePage :FC<Props> = async ({params, searchParams}) =>{
     const movie = await getMovie(id);
 
     return(
-        <>
+        <div className={'page'}>
             <MovieInfo item={movie}/>
             <div>
                 <StarRating/>
@@ -33,7 +33,7 @@ const moviePage :FC<Props> = async ({params, searchParams}) =>{
                     openModal && <MovieListCard item={movie}/>
                 }
             </div>
-        </>
+        </div>
     )
 }
 export default moviePage

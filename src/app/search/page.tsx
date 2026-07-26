@@ -8,9 +8,9 @@ const search= async ({searchParams}:Props) =>{
     const resolvedSearchParams = await searchParams;
 
     return(
-        <>
+        <div className={'page'}>
           <SearchMovies searchParams={resolvedSearchParams}/>
-        </>
+        </div>
     )
 }
 export default search

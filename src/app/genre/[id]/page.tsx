@@ -2,6 +2,7 @@
 import {getMoviesGenre} from "@/src/services/api-service";
 import {MoviesList} from "@/src/components/movies-list-component/movies-list/MoviesList";
 import Link from "next/link";
+import '../../../components/movies-list-component/movies-list-render/style/movieListRenderStyle.css'
 
 interface Props {
     params:Promise<{id:string}>,
@@ -21,24 +22,25 @@ const genrePage = async ({params, searchParams}:Props) =>{
     const nextPage = Math.min(numPage +1,fullPages);
 
 
-    return(
-        <section>
-            <div>
+    return (
+        <div className={'page'}>
+            <div className={'movieList'}>
                 {
-                genreMovies.map(movie => <MoviesList key={movie.id} item={movie}/>)
-
-                 }
+                    genreMovies.map(movie => <MoviesList key={movie.id} item={movie}/>)
+                }
             </div>
-            <div>
-                {isFirstPage ?(
-                    <button disabled>Back</button>):(<Link href={`?page=${prevPage}`}>Back</Link>
-                )}
-                <p>{numPage}</p>
-                {isLastPage ?(
-                    <button disabled>Next</button>):(<Link href={`?page=${nextPage}`}>Next</Link>
-                )}
-            </div>
-        </section>
+            <section>
+                <div className={'search'}>
+                    {isFirstPage ?(
+                        <button disabled>Back</button>):(<Link href={`?page=${prevPage}`}>Back</Link>
+                    )}
+                    <p>{numPage}</p>
+                    {isLastPage ?(
+                        <button disabled>Next</button>):(<Link href={`?page=${nextPage}`}>Next</Link>
+                    )}
+                </div>
+            </section>
+        </div>
     )
 }
 

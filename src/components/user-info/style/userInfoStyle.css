@@ -1,0 +1,15 @@
+.userImage{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: solid 2px #d50699;
+}
+.userInfoDiv{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.userInfoDiv>p{
+    font-size: 18px;
+    color: #e14da4;
+}

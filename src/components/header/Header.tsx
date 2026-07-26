@@ -3,7 +3,6 @@ import {UserInfo} from "@/src/components/user-info/UserInfo";
 import {GenreBadgeRender} from "@/src/components/genre-component/genre-badge-render/GenreBadgeRender";
 import './style/headerStyle.css'
 
-import {SyntheticEvent} from "react";
 
 
 

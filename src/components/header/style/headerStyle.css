@@ -4,7 +4,11 @@
 
 .genreButton{
     cursor: pointer;
-    background: silver;
+    color: #afd6af;
+    font-size: 18px;
+    width: 70px;
+    height: 30px;
+
 }
 
 .genreMenu{
@@ -13,4 +17,43 @@
 
 .genreCheckbox:checked ~ .genreMenu{
     display: block;
+    position: absolute;
 }
+
+header{
+    height: 150px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+
+.genreButton:active{
+    transform: scale(0.97);
+}
+
+header>h1{
+    font-size: 50px;
+    color: #3cbaba;
+}
+
+form{
+    display: flex;
+    gap: 10px;
+    position: relative
+}
+
+form>input{
+    border: #7af1e6 solid 2px;
+    border-radius: 5px;
+    width: 200px;
+    height: 22px;
+    color: #afd6af;
+    padding-left: 5px;
+
+}
+form>input::placeholder{
+    color: rgb(175 214 175 / 0.87);
+}
+
