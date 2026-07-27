@@ -9,15 +9,15 @@
     transition: 0.5s;
     gap: 5px;
 }
-.moviesList>div>h3{
+.movieTitle>h3{
     color: #bee3be;
     font-size: 25px;
 }
-.moviesList>div>p{
+.movieTitle>p{
     color: #f6f0de;
     font-size: 20px;
 }
-.moviesList>div>p>span{
+.movieTitle>p>span{
     color: gold;
     margin-left: 5px;
 }

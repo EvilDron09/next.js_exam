@@ -1,0 +1,27 @@
+.movieInfo>div:first-child{
+    display: flex;
+    justify-content: center;
+}
+
+.movieInfo>div:last-child{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+    margin: 50px 20px 30px 30px;
+}
+
+.movieInfo>div:last-child>h3{
+    color: #afd6af;
+    font-size: 25px;
+}
+
+.movieInfo>div:last-child>p{
+    color: #ead28c;
+    font-size: 20px;
+}
+
+.movieInfo>div:last-child>p>span{
+    color: gold;
+    margin-left: 5px;
+}

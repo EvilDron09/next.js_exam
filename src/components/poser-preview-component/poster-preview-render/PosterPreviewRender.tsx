@@ -6,7 +6,7 @@ import './style/posterPreviewStyle.css'
 export const PosterPreviewRender = async () => {
  const previews = await getPopularMovies();
  if(!previews|| previews.length === 0) return null;
-const currentMovies = previews.slice(0,4)
+const currentMovies = previews.slice(0,3)
     return (
         <div className={'posterPreview'}>
             {

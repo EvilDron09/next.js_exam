@@ -28,14 +28,14 @@ header{
     margin-bottom: 100px;
 }
 
-
 .genreButton:active{
-    transform: scale(0.97);
+    color: #3cbaba;
 }
 
 header>h1{
     font-size: 50px;
     color: #3cbaba;
+    display: flex;
 }
 
 form{
@@ -55,5 +55,13 @@ form>input{
 }
 form>input::placeholder{
     color: rgb(175 214 175 / 0.87);
+}
+
+form>button{
+    color: #afd6af;
+}
+
+form>button:active{
+    transform: scale(0.95);
 }
 

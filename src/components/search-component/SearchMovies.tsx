@@ -1,6 +1,7 @@
 import {getMovieSearch} from "@/src/services/api-service";
 import {MoviesList} from "@/src/components/movies-list-component/movies-list/MoviesList";
 import Link from "next/link";
+import './style/searchMoviesStyle.css'
 
 interface Props {
     searchParams:{query?:string, page?:number}
@@ -16,8 +17,6 @@ export const SearchMovies = async ({searchParams}:Props) => {
     const isLastPage = currentPage >= fullPages;
     const prevPage = Math.max(currentPage -1,1);
     const nextPage = Math.min(currentPage +1,fullPages);
-
-
 
 
     return (

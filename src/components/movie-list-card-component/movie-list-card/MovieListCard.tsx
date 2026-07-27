@@ -1,4 +1,5 @@
 import {IResult} from "@/src/models/movie/IResult";
+import './style/movieListCardStyle.css'
 
 interface IMovieListCard {
     item:IResult

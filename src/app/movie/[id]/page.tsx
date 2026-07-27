@@ -1,11 +1,9 @@
-
 import {FC} from "react";
 import {MovieInfo} from "@/src/components/movie-info-component/movie-info/MovieInfo";
 import {getMovie} from "@/src/services/api-service";
 import Link from "next/link";
 import {MovieListCard} from "@/src/components/movie-list-card-component/movie-list-card/MovieListCard";
-import {StarRating} from "@/src/components/star-rating-component/StarRating";
-
+import './style.css'
 
 
 type Props = {
@@ -24,11 +22,9 @@ const moviePage :FC<Props> = async ({params, searchParams}) =>{
     return(
         <div className={'page'}>
             <MovieInfo item={movie}/>
-            <div>
-                <StarRating/>
-            </div>
-            <div>
-                <button><Link href='?modal=true'> All Info</Link></button>
+
+            <div className={'fullInfo'}>
+                <button ><Link href='?modal=true'> All Info</Link></button>
                 {
                     openModal && <MovieListCard item={movie}/>
                 }
