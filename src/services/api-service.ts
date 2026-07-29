@@ -12,7 +12,8 @@ export const getMovies = async(): Promise<IResult[]> =>{
             headers:{
                 'Authorization': `Bearer ${apiKey}`,
                 'Content-Type': 'application/json'
-            }
+            },
+            cache:'no-cache'
         })
         const data = await response.json()
         return data.results || []
@@ -54,7 +55,8 @@ export const getMoviesGenre = async(id:string, page:number): Promise<IResult[]> 
             headers: {
                 'Authorization': `Bearer ${apiKey}`,
                 'Content-Type': 'application/json'
-            }
+            },
+            cache:'no-cache'
         })
         const data = await response.json()
         return data.results || []
@@ -70,7 +72,8 @@ export const getPopularMovies = async(): Promise<IResult[]> => {
             headers: {
                 'Authorization': `Bearer ${apiKey}`,
                 'Content-Type': 'application/json'
-            }
+            },
+            cache:'no-cache'
         })
         const data = await response.json()
         return data.results || []
@@ -86,7 +89,8 @@ export const getMoviePages = async(page:number): Promise<IResult[]> => {
             headers: {
                 'Authorization': `Bearer ${apiKey}`,
                 'Content-Type': 'application/json'
-            }
+            },
+            cache:'no-cache'
         })
         const data = await response.json()
         return data.results || []
@@ -102,7 +106,8 @@ export const getMovieSearch = async(query:string, page:number): Promise<IResult[
             headers: {
                 'Authorization': `Bearer ${apiKey}`,
                 'Content-Type': 'application/json'
-            }
+            },
+            cache:'no-cache'
         })
         const data = await response.json()
         return data.results || []

@@ -18,7 +18,7 @@ export const Header =  () => {
                 <div className={'genreMenu'}><GenreBadgeRender/></div>
             </div>
             <form action='/search' method='GET'>
-                <input type="text" name='query' placeholder={"movie search"}/>
+                <input type="text" name='query' placeholder={"movie search"} required/>
                 <button type={'submit'}>Send</button>
             </form>
         </header>
